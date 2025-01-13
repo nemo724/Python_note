@@ -180,3 +180,32 @@ else : # 위의 elif가 참으로 실행되었기에 해당 조건문은 실행�
 
 
 
+# 4. 중첩 if문 
+# Q. 특정 조건문에서 참인 것들 중에서 그 안에서도 어떠한 기준에 따라 참, 거짓 또는 특정 값으로 나누고 싶을 때는 어떻게 해야 하는가?
+# A. if문 안에  또 다른 if문을 넣어 참, 거짓, 특정 기준을 조건식으로 분류하게 만든다
+
+import random as r
+Students =\
+[ {'name': '소라사키 히나','age':17,'school':'게헨나'},
+  {'name':'류우게 키사키','age':17,'school':'산해경'},
+  {'name': '이오치 마리','age': 15,'school':'트리니티'},
+  {'name' : '쿠다 이즈나','age':15,'school':'백귀야행'},
+]
+
+num = r.randrange(0,3)
+if Students[num].get('age') == 17: # 학생의 나이가 17살인 경우
+    if Students[num].get('school') == '게헨나':# 학생의 나이가 17살이고 학교가 게헨나인 경우
+        print(f"{Students[num].get('name'):} 은(는) 게헨나 3학년입니다")
+
+    elif Students[num].get('school') == '산해경':# 학생의 나이가 17살이고 학교가 산해경인 경우
+        print(f"{Students[num].get('name'):} 은(는) 산해경 3학년입니다")
+
+elif Students[num].get('age') == 15: # 학생의 나이가 15살인 경우
+    if Students[num].get('school') == '트리니티': # 학생의 나이가 15살이고 학교가 트리니티인 경우
+        print(f"{Students[num].get('name'):} 은(는) 트리니티 1학년입니다")
+
+    elif Students[num].get('school') == '백귀야행': # 학생의 나이가 15살이고 학교가 백귀야행인 경우
+        print(f"{Students[num].get('name'):} 은(는) 백귀야행 1학년입니다")
+
+# 이렇게 다중 if문을 쓰면 같은 값을 가지는 경우여도 
+# 특정 조건을 더 걸어 분리할 수 있기에 특정 명령문을 실행하거나 or 특정 값을 갖게 할 수도도 있다
