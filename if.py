@@ -140,3 +140,43 @@ if student9.get('name') != student10.get('name'):
 
 
 
+
+# 3. 다중 if문
+# Q. 만일 if의 조건문의 참은 아니지만 else의 문장을 실행시키는 것이 아닌 특정 다른 명령문을 실행시켜야 할 때 어떻게 해야 하는가?
+# A. 다른 조건식을 추가하여 해당 조건식이 참일 때 실행시키게 한다
+
+# 3-1 elif를 이용한 조건문
+# C에서는 else if문이라 작성 하지만 Python은 이를 축약하여 elif라 작성
+# elif 조건식 :
+#     (해당 elif의 조건문이 참일 때 실행시키고 싶은 명령문)
+
+student1.update(school='아비도스')
+
+print("student1는 어느 학교입니까?")
+
+if student1.get('school') == '게헨나': # 아비도스 == 게헨나는 거짓이기에 실행되지 않음
+    print(f'{student1.get('name'):}은 게헨나의 학생입니다')
+
+elif student1.get('school') == '아비도스': # elif의 아비도스 == 아비도스는 참이기에 해당 elif의 조건문이 실행됨 
+    print(f'{student1.get('name'):}은 아비도스의 학생입니다')
+
+else : # 위의 elif가 참으로 실행되었기에 해당 조건문은 실행되지 않음음
+    print('해당 학생의 학교는 등록되어 있지 않습니다')
+
+# 다중 if문들은 if -> elif -> else 순서대로 내려가며 조건식을 계산하기에 해당 순서를 지키며 다중 if문을 작성해야함
+# 내려가면서 참인 조건문이 있으면 해당 조건문만 실행 하여 그 뒤의 elif문들, else문은 무시함
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
