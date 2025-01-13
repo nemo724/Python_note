@@ -67,3 +67,76 @@ else : # 그러나 student2.get('name') 반환값이 '스나오오카미 시로�
 
 
 
+
+
+# 2. 관계 연산자
+
+# 2-1 초과 미만을 나타내는 <,>
+student3 = {'name':"하야세 유우카", 'height': 156}
+student4 = {'name': '우시오 노아','height': 161}
+
+print("student3가 student 4보다 작습니까?")
+
+
+if student3.get('height')<student4.get('height'):# 156 < 161이 맞습니까?(답 : 참)
+    print(f"답 :{student3.get('height')< student4.get('height'):}")
+
+student5 = {'name':"사이바 모모이", 'height': 143}
+student6 = {'name':"사이바 미도리", 'height': 143}
+
+print("student5가 student 6보다 작습니까?")
+
+if student5.get('height')<student6.get('height'):# 143 < 143이 맞습니까?(답 : 거짓) 
+    print(f"답 : {student5.get('height')<student6.get('height'):}") # 조건식이 거짓으로 실행되지 않음
+
+# <와 >는 오로지 두 값의 비교를 크거나 작거나로만 보기에 
+# 두 값이 같은 경우는 무조건 거짓으로 판단
+
+
+
+
+# 2-2 이상, 이하를 나타내는 >=,<=
+student7 = {'name':'텐도 아리스', 'height':152}
+student8 = {'name':'하나오카 유즈', 'height':150}
+
+print('student7의 키는 150이상입니까?')
+
+if student7.get('height')>= 150:# 152 >= 150 (답 : 참)
+    print("네 150 이상입니다")
+
+print('student8의 키는 150이상입니까?')# 150 >= 150 (답 : 참)
+
+if student8.get('height')>= 150:
+    print("네 150 이상입니다")
+
+# 이상과 이하는 두 값의 크거나 작거나 외에 같은지도 보기에 <,>보다 더 유연하게 쓸 수 있음
+
+
+
+
+# 2-3 같음과 같지 않음을 나타내는 ==, !=
+student9 = {'name':'키류 키쿄','species':'고양이'}
+student10 = {'name':'쿄야마 카즈사', 'species':'고양이'}
+
+print('student9 과 student10은 같은 종족인 학생입니까?')
+
+if student9.get('species') == student10.get('species'):
+    print("네 해당 두 학생은 같은 종족입니다")
+
+print('student9 과 student10은 그럼 이름은 다릅니까?')
+
+if student9.get('name') != student10.get('name'):
+    print(f"네 두 학생은 각각 {student9.get('name'):},{student10.get('name'):} 로 이름이 다릅니다")
+
+# ==은 두 값이 같을때만 참, !=은 두 값이 다를때만 참
+
+
+
+
+
+
+
+
+
+
+
